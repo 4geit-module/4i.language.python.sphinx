@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<module name="4i.language.python.sphinx" branch="master">
+  <module name="4i.language.python" required_branch="master"/>
+
+  <core name="reference" required_branch="master"/>
+  <core name="string" required_branch="master"/>
+  <core name="logger" required_branch="master"/>
+  <core name="file" required_branch="master"/>
+  <core name="conditional" required_branch="master"/>
+  <core name="cache" required_branch="master"/>
+  <core name="abstractor" required_branch="master"/>
+  <core name="extension" required_branch="master"/>
+
+  <require name="sphinx" version="1.2.3"/>
+  <require name="sphinxcontrib-blockdiag" version="1.4.4"/>
+  <require name="sphinxcontrib-nwdiag" version="0.8.2"/>
+  <require name="sphinxcontrib-actdiag" version="0.7.2"/>
+  <require name="sphinxcontrib-seqdiag" version="0.7.2"/>
+  <require name="sphinx-intl" version="0.9.5"/>
+  <require name="sphinxcontrib-plantuml" version="0.4"/>
+  <require name="numpydoc" version="0.5"/>
+  <require name="sphinx_rtd_theme" version="0.1.6"/>
+  <require name="numpy" version="1.9.1"/>
+  <require name="matplotlib" version="1.4.2"/>
+  <require name="ipython" version="2.3.1"/>
+
+  <todo></todo>
+
+  <gsl from="build__sh.gsl" output="build.sh" binary="True"/>
+  <gsl from="Makefile.gsl" output="Makefile"/>
+  <dir name="source">
+    <gsl from="conf__py.gsl" output="conf.py"/>
+    <!-- <gsl from="index__rst.gsl" output="index.rst"/> -->
+    <dir name="_templates"/>
+    <dir name="_static"/>
+  </dir>
+
+  <node name="project">
+    <attribute name="language" required="True"/>
+  </node> <!-- !project -->
+</module>
