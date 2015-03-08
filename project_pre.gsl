@@ -13,17 +13,17 @@ function print_title(title, c, double)
   return my.s
 endfunction
 
-function print_parts(ctx)
+function print_rst(ctx)
   my.ctx ?= project
 
-  for my.ctx.part as p
+  for my.ctx.rst as r
 .template 1
-   $(p.source_path)$(p.name:)
+   $(r.source_path)$(r.name:)
 .endtemplate
   endfor
   
   for my.ctx.dir as d
-    print_parts(d)
+    print_rst(d)
   endfor
 endfunction
 

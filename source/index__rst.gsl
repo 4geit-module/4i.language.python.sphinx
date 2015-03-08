@@ -27,7 +27,7 @@ Contents:
    :numbered: 2
    :maxdepth: 2
 
-.print_parts()
+.print_rst()
 
 Indices and tables
 ==================

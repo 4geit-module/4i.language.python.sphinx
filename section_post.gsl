@@ -1,0 +1,6 @@
+.template 1
+.
+$(print_title("$(projectnode.name:)", '='):)
+
+.
+.endtemplate
