@@ -27,13 +27,7 @@ Contents:
    :numbered: 2
    :maxdepth: 2
 
-   changelog
-   inception
-   terms
-   components/index
-   planning/index
-   infrastructure
-   apps/index
+.print_parts()
 
 Indices and tables
 ==================

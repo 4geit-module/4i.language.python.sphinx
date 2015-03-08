@@ -1,0 +1,8 @@
+.template 0
+
+if defined(projectnode.path)
+  projectnode.source_path = projectnode.path
+  projectnode.path = 'source/' + projectnode.path
+endif
+
+.endtemplate

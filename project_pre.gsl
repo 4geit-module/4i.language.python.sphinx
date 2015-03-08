@@ -13,4 +13,18 @@ function print_title(title, c, double)
   return my.s
 endfunction
 
+function print_parts(ctx)
+  my.ctx ?= project
+
+  for my.ctx.part as p
+.template 1
+   $(p.source_path)$(p.name:)
+.endtemplate
+  endfor
+  
+  for my.ctx.dir as d
+    print_parts(d)
+  endfor
+endfunction
+
 .endtemplate

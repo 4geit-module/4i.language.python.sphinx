@@ -37,5 +37,40 @@
 
   <node name="project" pre="project_pre.gsl">
     <attribute name="language" required="True"/>
+    <node name="paragraph" number="*">
+    </node>
+    <node name="subsubsection" number="*">
+      <node ref=":paragraph"/>
+    </node>
+    <node name="subsection" number="*">
+      <node ref=":subsubsection"/>
+      <node ref=":paragraph"/>
+    </node>
+    <node name="section" number="*">
+      <node ref=":subsection"/>
+      <node ref=":subsubsection"/>
+      <node ref=":paragraph"/>
+    </node>
+    <node name="chapter" number="*">
+      <node ref=":section"/>
+      <node ref=":subsection"/>
+      <node ref=":subsubsection"/>
+      <node ref=":paragraph"/>
+    </node>
+    <node name="part" number="*" dst="#(path)#(name).rst" debug="True" pre_check="part_pre_check.gsl" post="part_post.gsl">
+      <node ref=":chapter"/>
+      <node ref=":section"/>
+      <node ref=":subsection"/>
+      <node ref=":subsubsection"/>
+      <node ref=":paragraph"/>
+      <attribute name="name" required="True"/>
+      <attribute name="display" required="True"/>
+    </node>
+    <node name="dir" number="*" debug="True" pre_check="dir_pre_check.gsl">
+      <attribute name="name" required="True"/>
+      <attribute name="path" required="True"/>
+      <node ref=":part"/>
+      <node ref=":dir"/>
+    </node> <!-- !dir -->
   </node> <!-- !project -->
 </module>

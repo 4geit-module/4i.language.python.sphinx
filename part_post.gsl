@@ -1,0 +1,5 @@
+.template 1
+.
+$(print_title("$(projectnode.display:)", '#', 1):)
+.
+.endtemplate
