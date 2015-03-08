@@ -1,0 +1,16 @@
+.template 0
+
+function print_title(title, c, double)
+  my.c ?= "="
+  my.double ?= 0
+  my.length = string.length(my.title)
+  my.s = ""
+  if my.double
+    my.s += string__fill(my.c, my.length) + "\n"
+  endif
+  my.s += my.title + "\n"
+  my.s += string__fill(my.c, my.length)
+  return my.s
+endfunction
+
+.endtemplate

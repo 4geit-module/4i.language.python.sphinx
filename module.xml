@@ -30,12 +30,12 @@
   <gsl from="Makefile.gsl" output="Makefile"/>
   <dir name="source">
     <gsl from="conf__py.gsl" output="conf.py"/>
-    <!-- <gsl from="index__rst.gsl" output="index.rst"/> -->
+    <gsl from="index__rst.gsl" output="index.rst"/>
     <dir name="_templates"/>
     <dir name="_static"/>
   </dir>
 
-  <node name="project">
+  <node name="project" pre="project_pre.gsl">
     <attribute name="language" required="True"/>
   </node> <!-- !project -->
 </module>
