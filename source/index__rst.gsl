@@ -24,7 +24,9 @@ $(print_title("$(project.Name)'s specification documentation", '='):)
 Contents:
 
 \.. toctree::
-   :numbered: 2
+.if defined(project.numbered)
+   :numbered: $(project.numbered)
+.endif
    :maxdepth: 2
 
 .print_rst()
