@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<module name="4i.language.python.sphinx" branch="master">
+<module name="4i.language.python.sphinx" branch="master" description="Primitive 4i module to generate Sphinx code">
   <module name="4i.language.python" required_branch="master"/>
 
   <core name="reference" required_branch="master"/>
